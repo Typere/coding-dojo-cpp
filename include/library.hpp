@@ -6,6 +6,7 @@ class Board {
 
 public:
   void setAlive(int x, int y);
-  bool isAlive(int x, int y);
-  int countNeighboursAlive(int x, int y);
+  bool isAlive(int x, int y) const;
+  int countNeighboursAlive(int x, int y) const;
+  static bool evaluate(int numAlive);
 };

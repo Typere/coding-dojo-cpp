@@ -23,3 +23,8 @@ TEST_CASE("Count neighbours of cell") {
   b.setAlive(1, 1);
   REQUIRE(b.countNeighboursAlive(0, 0) == 8);
 }
+
+TEST_CASE("Test survivor rule") {
+  Board b;
+  REQUIRE(b.evaluate(2) == true);
+}
