@@ -2,8 +2,10 @@
 
 #include <set>
 class Board {
-    std::set<std::pair<int, int>> board;
+  std::set<std::pair<int, int>> board;
+
 public:
-    void setAlive(int, int);
-    bool isAlive(int,int);
+  void setAlive(int x, int y);
+  bool isAlive(int x, int y);
+  int countNeighboursAlive(int x, int y);
 };

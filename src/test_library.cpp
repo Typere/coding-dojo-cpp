@@ -10,3 +10,16 @@ TEST_CASE("Add one living cell to board") {
   b.setAlive(0, 0);
   REQUIRE(b.isAlive(0, 0) == true);
 }
+
+TEST_CASE("Count neighbours of cell") {
+  Board b;
+  b.setAlive(-1, -1);
+  b.setAlive(-1, 0);
+  b.setAlive(-1, 1);
+  b.setAlive(0, -1);
+  b.setAlive(0, +1);
+  b.setAlive(1, -1);
+  b.setAlive(1, 0);
+  b.setAlive(1, 1);
+  REQUIRE(b.countNeighboursAlive(0, 0) == 8);
+}
