@@ -4,4 +4,8 @@
 #include "library.hpp"
 
 /** The right place for tests **/
-TEST_CASE("Square of 2 is 4") { REQUIRE(square(2) == 4); }
+TEST_CASE("Add one living cell to board") {
+  Board b;
+  b.setAlive(0, 0);
+  REQUIRE(b.isAlive(0, 0) == true);
+}

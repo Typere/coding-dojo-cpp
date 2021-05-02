@@ -1,3 +1,7 @@
 /** The right place for the interface **/
 
-int square(int i);
+class Board {
+public:
+    void setAlive(int, int);
+    bool isAlive(int,int);
+};

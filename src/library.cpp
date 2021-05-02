@@ -1,4 +1,12 @@
 #include "library.hpp"
 /** The right place for the implementation **/
 
-int square(int i) { return i * i; }
+void Board::setAlive(int, int)
+{
+
+}
+
+bool Board::isAlive(int, int)
+{
+    return true;
+}
