@@ -26,5 +26,12 @@ TEST_CASE("Count neighbours of cell") {
 
 TEST_CASE("Test survivor rule") {
   Board b;
-  REQUIRE(b.evaluate(2) == true);
+  const int numSurive = GENERATE(2, 3);
+  REQUIRE(b.evaluate(numSurive) == true);
+}
+
+TEST_CASE("Test Kill") {
+  Board b;
+  const int numKills = GENERATE(0, 1, 4, 5, 6, 7, 8);
+  REQUIRE(b.evaluate(numKills) == false);
 }
